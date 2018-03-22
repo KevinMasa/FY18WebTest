@@ -1,7 +1,3 @@
-<?php
-$comment = $_GET[ecommentf];
-echo $comment;
-?>
 <!DOCTYPE html>
 <html lang = gjah>
 <head>
@@ -12,7 +8,7 @@ echo $comment;
 <h1>ƒtƒH[ƒ€ƒf[ƒ^‚Ì‘—M</h1>
 <form action = gindex.phph method = ggeth>
 <input type = gtexth name =gcomment/g><br/>
-<input type = gsubmith value =g‘—M/g>
+ <button type='submit' name='action' value='send'>‘—M</button>
 </form>
 </body>
 </html>
