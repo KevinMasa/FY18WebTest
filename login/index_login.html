@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang = “ja”>
+<html lang = "ja">
 
 <head>
-<meta charset = “UFT-8”>
+<meta charset = "UFT-8">
 <title>ログインをする</title>
 <style type="text/css">
 
@@ -15,7 +15,7 @@ dl.profile dt{
 }
 dl.profile dd{
 	margin-left: 10em;
-	width: 300px;
+	width: 500px;
 	padding: 10px 10px 10px 0px;
 }
 
@@ -24,10 +24,10 @@ dl.profile dd{
 
 <body>
 <h1>ユーザーIDとパスワードの送信</h1>
-<form action = “index.php” method = “get”>
+<form action = "loginsuccess.php" method = "post">
 <dl class="profile">
 <dt>ID：</dt>
-<dd><input type = “text” name =“comment/“></dd>
+<dd><input type = "text" name ="comment" /></dd>
 
 <script>
 function checkPassword(e) {
@@ -41,9 +41,9 @@ function checkPassword(e) {
 </script>
 
 <dt>パスワード：</dt>
-<dd><input type="password" id="password" /> <input type="checkbox" onclick="checkPassword(this)" /></dd>
+<dd><input type="password" id="password"/> <input type="checkbox" onclick="checkPassword(this)" />パスワードを表示する</dd>
 </dl>
-<button type='submit' name='action' value='send'>ログイン</button>
+<button type="submit" name="action" value="send">ログイン</button>
 </form>
 </body>
 </html>
