@@ -34,7 +34,7 @@ dl.profile dd{
 <form action = "loginsuccess.php" method = "post">
 <dl class="profile">
 <dt>ユーザ名：</dt>
-<dd><input type = “text” name =“userid/“></dd>
+<dd><input type = "text" name ="userid"></dd>
 
 <script>
 function checkPassword(e) {
@@ -48,7 +48,7 @@ function checkPassword(e) {
 </script>
 
 <dt>パスワード：</dt>
-<dd><input type="password" id="password" name ="pass/" /> <input type="checkbox" onclick="checkPassword(this)" /></dd>
+<dd><input type="password" id="password" name ="pass" /> <input type="checkbox" onclick="checkPassword(this)" /></dd>
 </dl>
 <button type="submit" name="action" value="send">ログイン</button>
 </form>
