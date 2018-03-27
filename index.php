@@ -1,3 +1,8 @@
+<?php
+header('Content-Type: text/html; charset=UTF-8');
+?>
+
+
 <!DOCTYPE html>
 <html lang = "ja">
 
@@ -26,7 +31,7 @@ dl.profile dd{
 <h3>アカウントの情報を取得します。</h3>
 <h3>SQLインジェクションのサンプルです。</h3></br>
 <h4>ユーザ名とパスワードを入力してください</h4>
-<form action = "index.html" method = "post">
+<form action = "index.php" method = "post">
 <dl class="profile">
 <dt>ユーザ名：</dt>
 <dd><input type = “text” name =“comment/“></dd>
