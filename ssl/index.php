@@ -28,7 +28,7 @@ dl.profile dd{
 
 <body>
 <h3>HTTPとHTTPS通信内容の違い</h3>
-<h3>このサイトにhttp://とhttps://のそれぞれでアクセスし</h3></br>
+<h3>このページにhttp://とhttps://のそれぞれでアクセスし</h3></br>
 <h3>ログインをして、WireSharkで通信内容を確認してみましょう。</h3></br>
 <h4>ユーザ名とパスワードを入力してください</h4>
 <form action = "loginsuccess.php" method = "post">
