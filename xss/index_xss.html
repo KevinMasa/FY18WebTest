@@ -38,8 +38,9 @@ body{
 <section class="toukou">
     <h2 >“Šeˆê——</h2>
     <?php if(isset($_POST['comment'])){
-    <p>“Še‚Í‚Ü‚¾‚ ‚è‚Ü‚¹‚ñ</p>}else{
-
+    <p>“Še‚Í‚Ü‚¾‚ ‚è‚Ü‚¹‚ñ</p>
+    ?>
+    <?php }else{
 $personal_name = $_POST['name'];
 $contents = $_POST['comment'];
 $contents = nl2br($contents);
