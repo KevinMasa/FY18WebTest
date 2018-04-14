@@ -59,7 +59,7 @@ function checkPassword(e) {
 </script>
 
 <dt>パスワード：</dt>
-<dd><input type="password" id="password" name ="pass" /> <input type="checkbox" onclick="checkPassword(this)" /></dd>
+<dd><input type="password" id="password" name ="pass" /> <input type="checkbox" onclick="checkPassword(this)" />パスワードを表示</dd>
 </dl>
 <button type="submit" name="action" value="send">ログイン</button>
 </form>
