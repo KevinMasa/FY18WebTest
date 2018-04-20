@@ -28,7 +28,7 @@ die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 $res = mysqli_query($conn, 'SELECT * FROM maintable');
 while ($row = mysqli_fetch_assoc($res)) {
-var_dump($row);}
+}
 
 mysqli_close($conn);
 
