@@ -28,8 +28,8 @@ die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 $res = mysqli_query($conn, 'SELECT * FROM maintable');
 while ($row = mysqli_fetch_assoc($res)) {
-  echo 'id:', $row['id'],'\t';
-  echo 'password:',$row['password'];
+  echo "id:", $row['id'],"\t";
+  echo "password:",$row['password'];
 }
 
 mysqli_close($conn);
