@@ -15,24 +15,26 @@ header("Content-Type: text/html; charset=Shift_JIS");
 <h2>ログイン後ページ</h2>
 <p>
 <?php 
-$link = mysql_connect('fy18myserver.mysql.database.azure.com', 'fy18admin@fy18myserver', 'Fy18_admin');
-if (!$link) {
-    die('接続失敗です。'.mysql_error());
+$host = 'fy18myserver.mysql.database.azure.com';
+$username = 'fy18admin@fy18myserver';
+$password = 'Fy18_admin';
+$db_name = 'maindb';
+
+
+$conn = mysqli_init();
+mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306);
+if (mysqli_connect_errno($conn)) {
+die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
+$res = mysqli_query($conn, 'SELECT * FROM maintable');
+while ($row = mysqli_fetch_assoc($res)) {
+var_dump($row);}
 
-$db_selected = mysql_select_db('maindb', $link);
-if (!$db_selected){
-    die('データベース選択失敗です。'.mysql_error());
-}
+mysqli_close($conn);
 
-$result = mysql_query('SELECT * from maintable');
-if (!$result) {
-    die('クエリーが失敗しました。'.mysql_error());
-}
+?>
 
-mysql_close($link); ?>
-
-<?php echo $result; ?>
+<?php echo $res; ?>
 
 <?php
  echo htmlspecialchars($_POST["comment"], ENT_QUOTES, "UTF-8"); 
