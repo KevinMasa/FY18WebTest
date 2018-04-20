@@ -32,10 +32,11 @@ if (!$result) {
 
 mysql_close($link); ?>
 
-<?php exho $result; ?>
+<?php echo $result; ?>
 
 <?php
- echo htmlspecialchars($_POST["comment"], ENT_QUOTES, "UTF-8"); ?>
+ echo htmlspecialchars($_POST["comment"], ENT_QUOTES, "UTF-8"); 
+ ?>
 </p>—l‚æ‚¤‚±‚»<br>
 </body>
 </html>
