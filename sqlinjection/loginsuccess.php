@@ -15,7 +15,7 @@ header("Content-Type: text/html; charset=Shift_JIS");
 <h2>ログイン後ページ</h2>
 <p>
 <?php 
-$link = mysql_connect('fy18myserver.mysql.database.azure.com', 'fy18admin', 'Fy18_admin');
+$link = mysql_connect('fy18myserver.mysql.database.azure.com', 'fy18admin@fy18myserver', 'Fy18_admin');
 if (!$link) {
     die('接続失敗です。'.mysql_error());
 }
