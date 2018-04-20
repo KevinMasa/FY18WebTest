@@ -28,13 +28,13 @@ die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 $res = mysqli_query($conn, 'SELECT * FROM maintable');
 while ($row = mysqli_fetch_assoc($res)) {
-}
+  print($row['id']);
+    print($row['password']);}
 
 mysqli_close($conn);
 
 ?>
 
-<?php echo $row; ?>
 
 <?php
  echo htmlspecialchars($_POST["comment"], ENT_QUOTES, "UTF-8"); 
