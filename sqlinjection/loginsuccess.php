@@ -32,7 +32,7 @@ if (!$result) {
 
 mysql_close($link); ?>
 
-<?php exho $result ?>
+<?php exho $result; ?>
 
 <?php
  echo htmlspecialchars($_POST["comment"], ENT_QUOTES, "UTF-8"); ?>
