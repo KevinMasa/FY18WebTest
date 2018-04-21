@@ -42,8 +42,8 @@ body{
     <h2 >“Šeˆê——</h2>
 <?php
      if(isset($_POST['comment'])){
-     <p>“Še‚Í‚Ü‚¾‚ ‚è‚Ü‚¹‚ñ</p>
- }else{
+         echo "<p>“Še‚Í‚Ü‚¾‚ ‚è‚Ü‚¹‚ñ</p>";
+     }else{
 $personal_name = "'".$_POST['name']."'";
 $personal_comment = "'".$_POST['comment']."'";
 $nowdate = date(Y-m-d);
