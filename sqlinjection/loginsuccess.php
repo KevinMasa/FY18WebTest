@@ -24,7 +24,7 @@ $connectionOptions = array(
 );
 
 $conn = sqlsrv_connect($serverName, $connectionOptions);
-$tsql= "SELECT *FROM maintb WHERE id=".$inputid;
+$tsql= "SELECT *FROM maintb WHERE id='admin'";
 $getResults= sqlsrv_query($conn, $tsql);
 echo ("Reading data from table" . PHP_EOL);
 if ($getResults == FALSE)
