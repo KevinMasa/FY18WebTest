@@ -6,7 +6,7 @@ header("Content-Type: text/html; charset=Shift_JIS");
 <html lang = "ja">
 
 <head>
-<meta charset = "UFT-8">
+<meta charset = "UTF-8">
 <title>XSS(‘Îô)</title>
 </head>
 
