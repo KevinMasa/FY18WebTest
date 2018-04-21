@@ -7,15 +7,14 @@ header("Content-Type: text/html; charset=Shift_JIS");
 
 <head>
 <meta charset = "UFT-8">
-<title>ログイン後</title>
+<title>SQL Injection</title>
 </head>
 
 <body>
-<h1>ユーザーIDとパスワードの送信</h1>
-<h2>ログイン後ページ</h2>
+<h2>アカウント情報の取得</h2>
 <p>
 <?php 
-$inputid = "'".$_POST["id"]."'";
+$inputid = $_POST["id"];
 
 echo $_POST["id"]; 
 $serverName = "fy18test.database.windows.net";
@@ -34,7 +33,7 @@ echo ("Reading data from table" . PHP_EOL);
 if ($getResults == FALSE)
     echo (sqlsrv_errors());
 while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
- echo ($row['id'] . " " . $row['password'] . PHP_EOL);
+ echo ("id:".$row['id'] . " " . "password:".$row['password'] . PHP_EOL);
 }
 sqlsrv_free_stmt($getResults);
 
