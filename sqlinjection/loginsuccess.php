@@ -13,6 +13,12 @@ header("Content-Type: text/html; charset=Shift_JIS");
 <body>
 <h2>アカウント情報の取得</h2>
 
+<?php 
+$inputid = "'".$_POST["id"]."'";
+$tsql= "SELECT *FROM maintb WHERE name=".$inputid;
+echo "渡されたSQL文　".$tsql;
+?>
+
 <table border="1">
 <tr>
 <th>id</th>
@@ -30,8 +36,7 @@ $connectionOptions = array(
 );
 $conn = sqlsrv_connect($serverName, $connectionOptions);
 $tsql= "SELECT *FROM maintb WHERE name=".$inputid;
-echo "渡されたSQL文　".$tsql;
-echo "<br>";
+
 
 $getResults= sqlsrv_query($conn, $tsql);
 
@@ -51,8 +56,6 @@ sqlsrv_free_stmt($getResults);
 //%' OR 1 = 1; -- %
 
 ?>
-
-
 </table>
 
 </body>
