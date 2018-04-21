@@ -20,7 +20,7 @@ header("Content-Type: text/html; charset=Shift_JIS");
 <th>password</th>
 </tr>
 <?php 
-$inputid = "'".$_POST["id"]."'";
+$inputid = array($_POST["id"]);
 
 $serverName = "fy18test.database.windows.net";
 $connectionOptions = array(
