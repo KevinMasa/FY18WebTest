@@ -19,7 +19,7 @@ $host = 'fy18myserver.mysql.database.azure.com';
 $username = 'fy18admin@fy18myserver';
 $password = 'Fy18_admin';
 $db_name = 'maindb';
-$inputid = 'admin';
+$inputid = "admin";
 
 $conn = mysqli_init();
 mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306);
