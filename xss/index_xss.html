@@ -4,20 +4,8 @@
 
 <head>
 <meta charset = "UFT-8">
-<title>掲示板</title>
+<title>XSS(脆弱)</title>
 <style type="text/css">
-body{
-    text-align:center;
-}
-.label{
-    vertical-align: top;
-    margin-right: 5px;
-}
-.toukou{
-    border-top: 1px solid;
-    margin: 40px auto;
-    max-width: 975px;
-}
 
 </style>
 </head>
@@ -26,51 +14,16 @@ body{
 
 <h3>クロスサイトスクリプティングのサンプルページです。</h3>
 
-<h1>掲示板</h1>
-<section>
-    <h2>新規投稿</h2>
-        <form action="" method="post">
-               <div class="name"><span class="label">お名前:</span><input type="text" name="name" value=""></div></br>
-        <div class="honbun"><span class="label">本文:</span><textarea name="comment" cols="30" rows="3" maxlength="80" wrap="hard" placeholder="80字以内で入力してください。"></textarea></div>
-        <input type="submit" value="投稿">
-    </form>
-</section>
-<section class="toukou">
-    <h2 >投稿一覧</h2>
-    <?php if(isset($_POST['comment'])){
-    <p>投稿はまだありません</p>
-    ?>
-    <?php }else{
-$personal_name = $_POST['name'];
-$contents = $_POST['comment'];
-$contents = nl2br($contents);
+<form action = "xss.html" method = "post">
+<dl class="profile">
+<dt>入力：</dt>
+<dd><input type = "text" name ="value" /></dd>
+</dl>
+<button type="submit" name="action" value="send">送る</button>
+</form>
 
-$data = "<hr>\r\n";
-$data = $data."<p>投稿者:".$personal_name."</p>\r\n";
-$data = $data."<p>内容:</p>\r\n";
-$data = $data."<p>".$contents."</p>\r\n";
-$keijban_file = 'comment_data.txt';
-$fp = fopen($keijban_file, 'ab');
-if ($fp){
-if (flock($fp, LOCK_EX)){
-if (fwrite($fp,  $data) === FALSE){
-print('ファイル書き込みに失敗しました');
-}
-flock($fp, LOCK_UN);
-}else{
-print('ファイルロックに失敗しました');
-}
-}
-fclose($fp);
-print('<p>投稿者:'.$personal_name.'</p>');
-print('<p>内容:</p>');
-print('<p>'.$contents.'</p>');
-?>
-</section>
 </body>
 </html>
-
-
 
 </body>
 </html>

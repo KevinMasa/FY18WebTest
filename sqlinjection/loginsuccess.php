@@ -16,7 +16,7 @@ header("Content-Type: text/html; charset=Shift_JIS");
 <?php 
 $inputid = $_POST["id"];
 $tsql= "SELECT *FROM maintb WHERE name='".$inputid."'";
-echo "“n‚³‚ê‚½SQL•¶@".$tsql;
+echo "“n‚³‚ê‚½SQL•¶@".htmlspecialchars($tsql,ENT_QUOTES);
 
 ?>
 <br>
