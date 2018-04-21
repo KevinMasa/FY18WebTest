@@ -12,7 +12,13 @@ header("Content-Type: text/html; charset=Shift_JIS");
 
 <body>
 <h2>アカウント情報の取得</h2>
-<p>
+
+<table border="1">
+<tr>
+<th>id</th>
+<th>name</th>
+<th>password</th>
+</tr>
 <?php 
 $inputid = "'".$_POST["id"]."'";
 
@@ -32,7 +38,12 @@ echo ("Reading data from table" . PHP_EOL);
 if ($getResults == FALSE)
     echo (sqlsrv_errors());
 while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
- echo ("id:".$row['name'] . " " . "password:".$row['password'] . PHP_EOL);
+ echo "<tr>"
+ echo "<td>".$row['id']."</td>"
+ echo "<td>".$row['name']."</td>"
+ echo "<td>".$row['password']."</td>"
+// echo ("id:".$row['name'] . " " . "password:".$row['password'] . PHP_EOL);
+ echo "</tr>"
 }
 sqlsrv_free_stmt($getResults);
 
@@ -41,7 +52,7 @@ sqlsrv_free_stmt($getResults);
 ?>
 
 
+</table>
 
-</p>
 </body>
 </html>
