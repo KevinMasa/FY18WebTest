@@ -16,6 +16,8 @@ header("Content-Type: text/html; charset=Shift_JIS");
 <p>
 <?php 
 $inputid = "'admin'";
+
+echo $_POST["id"]; 
 $serverName = "fy18test.database.windows.net";
 $connectionOptions = array(
     "Database" => "fy18test",
