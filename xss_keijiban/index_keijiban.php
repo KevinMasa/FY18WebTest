@@ -40,6 +40,7 @@ body{
 </section>
 <section class="toukou">
     <h2 >“Šeˆê——</h2>
+<!--
 <?php
      if(isset($_POST['comment'])){
          echo "<p>“Še‚Í‚Ü‚¾‚ ‚è‚Ü‚¹‚ñ</p>";
@@ -74,7 +75,7 @@ print('<p>“ŠeÒ:'.$personal_name.'</p>');
 print('<p>“à—e:</p>');
 print('<p>'.$contents.'</p>');
 ?>
-
+-->
 </section>
 </body>
 </html>
