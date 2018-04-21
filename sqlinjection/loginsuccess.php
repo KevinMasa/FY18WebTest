@@ -22,7 +22,6 @@ header("Content-Type: text/html; charset=Shift_JIS");
 <?php 
 $inputid = "'".$_POST["id"]."'";
 
-echo $_POST["id"]; 
 $serverName = "fy18test.database.windows.net";
 $connectionOptions = array(
     "Database" => "fy18test",
@@ -31,7 +30,7 @@ $connectionOptions = array(
 );
 $conn = sqlsrv_connect($serverName, $connectionOptions);
 $tsql= "SELECT *FROM maintb WHERE name=".$inputid;
-echo $tsql;
+echo "ìnÇ≥ÇÍÇΩSQLï∂Å@".$tsql;
 
 $getResults= sqlsrv_query($conn, $tsql);
 echo ("Reading data from table" . PHP_EOL);
