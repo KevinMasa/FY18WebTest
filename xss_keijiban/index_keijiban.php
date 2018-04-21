@@ -1,3 +1,6 @@
+<?php
+header("Content-Type: text/html; charset=Shift_JIS");
+?>
 
 <!DOCTYPE html>
 <html lang = "ja">
@@ -37,10 +40,10 @@ body{
 </section>
 <section class="toukou">
     <h2 >“Šeˆê——</h2>
-    <?php if(isset($_POST['comment'])){
-    <p>“Še‚Í‚Ü‚¾‚ ‚è‚Ü‚¹‚ñ</p>
-    ?>
-    <?php }else{
+<?php
+     if(isset($_POST['comment'])){
+     <p>“Še‚Í‚Ü‚¾‚ ‚è‚Ü‚¹‚ñ</p>
+ }else{
 $personal_name = "'".$_POST['name']."'";
 $personal_comment = "'".$_POST['comment']."'";
 $nowdate = date(Y-m-d);
@@ -72,12 +75,7 @@ print('<p>“à—e:</p>');
 print('<p>'.$contents.'</p>');
 ?>
 
-
 </section>
 </body>
 </html>
 
-
-
-</body>
-</html>
