@@ -31,9 +31,10 @@ $connectionOptions = array(
 $conn = sqlsrv_connect($serverName, $connectionOptions);
 $tsql= "SELECT *FROM maintb WHERE name=".$inputid;
 echo "ìnÇ≥ÇÍÇΩSQLï∂Å@".$tsql;
+echo "<br>";
 
 $getResults= sqlsrv_query($conn, $tsql);
-echo "<br>";
+
 
 if ($getResults == FALSE)
     echo (sqlsrv_errors());
