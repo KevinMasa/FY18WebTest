@@ -26,7 +26,7 @@ mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306);
 if (mysqli_connect_errno($conn)) {
 die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$res = mysqli_query($conn,'SELECT id,password FROM maintable WHERE id ="admin"');
+$res = mysqli_query($conn,'SELECT id,password FROM maintable WHERE id ='.$inputid);
 while ($row = mysqli_fetch_assoc($res)) {
   echo "id:", $row['id'];
   echo "\t";
