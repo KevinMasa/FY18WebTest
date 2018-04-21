@@ -25,7 +25,7 @@ $connectionOptions = array(
 );
 
 $conn = sqlsrv_connect($serverName, $connectionOptions);
-$tsql= "SELECT *FROM maintb WHERE id='%' OR 1 = 1; -- %'";
+$tsql= "SELECT *FROM maintb WHERE name='%' OR 1 = 1; -- %'";
 echo $tsql;
 
 $getResults= sqlsrv_query($conn, $tsql);
@@ -33,7 +33,7 @@ echo ("Reading data from table" . PHP_EOL);
 if ($getResults == FALSE)
     echo (sqlsrv_errors());
 while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
- echo ("id:".$row['id'] . " " . "password:".$row['password'] . PHP_EOL);
+ echo ("id:".$row['name'] . " " . "password:".$row['password'] . PHP_EOL);
 }
 sqlsrv_free_stmt($getResults);
 
