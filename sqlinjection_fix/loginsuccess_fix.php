@@ -62,7 +62,8 @@ sqlsrv_free_stmt($getResults);
 
 </table>
 
-/*<?php 
+<!--
+<?php 
 $inputid = $_POST["id"];
 
 $serverName = "fy18test.database.windows.net";
@@ -94,7 +95,7 @@ sqlsrv_free_stmt($getResults);
 //%' OR 1 = 1; -- %
 
 ?>
-*/
+-->
 
 </body>
 </html>
