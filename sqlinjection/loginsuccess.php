@@ -17,10 +17,10 @@ header("Content-Type: text/html; charset=Shift_JIS");
 $inputid = $_POST["id"];
 $tsql= "SELECT *FROM maintb WHERE name='".$inputid."'";
 echo "渡されたSQL文　".$tsql;
-echo "<br>↑ nameの後は「'」シングルクォートです。";
-?>
 
+?>
 <br>
+↑ nameの後は「'」シングルクォートです。
 <br>
 
 <table border="1">
