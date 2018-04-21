@@ -15,7 +15,7 @@ header("Content-Type: text/html; charset=Shift_JIS");
 <h2>ログイン後ページ</h2>
 <p>
 <?php 
-$inputid = 'admin';
+$inputid = "'admin'";
 $serverName = "fy18test.database.windows.net";
 $connectionOptions = array(
     "Database" => "fy18test",
