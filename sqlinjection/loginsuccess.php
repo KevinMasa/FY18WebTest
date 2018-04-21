@@ -26,11 +26,17 @@ mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306);
 if (mysqli_connect_errno($conn)) {
 die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$res = mysqli_query($conn, "SELECT id,password FROM maintable WHERE id=$inputid ");
+$res = mysqli_query($conn, "SELECT id,password FROM maintable WHERE id =",$inputid);
 while ($row = mysqli_fetch_assoc($res)) {
   echo "id:", $row['id'];
   echo "\t";
   echo "password:",$row['password'];
+}
+
+if(!$res){
+	$message = 'error:'. mysql_error();
+	echo $message;
+	die($message);
 }
 
 mysqli_close($conn);
