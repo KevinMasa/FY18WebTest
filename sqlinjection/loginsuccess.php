@@ -23,9 +23,8 @@ $connectionOptions = array(
     "Uid" => "fy18test",
     "PWD" => "Fy18_test"
 );
-
 $conn = sqlsrv_connect($serverName, $connectionOptions);
-$tsql= "SELECT *FROM maintb WHERE name='%' OR 1 = 1; -- %'";
+$tsql= "SELECT *FROM maintb WHERE name='".$inputid."'";
 echo $tsql;
 
 $getResults= sqlsrv_query($conn, $tsql);
