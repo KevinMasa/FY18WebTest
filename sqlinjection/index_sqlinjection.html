@@ -33,6 +33,8 @@ p{
 <h3>DBの全ての情報を抽出するSQL文になるよう、エイリアスに入力してみましょう</h3>
 ↓答え(例)：白抜き
 <p>' or 1 = 1 --</p>
+<p>「'」でname=''になるのでこの条件を偽として終わらせて、</p>
+<p>その後or 1 = 1 と続けることで、1=1で正とすることでWHERE句が全てを表すようになる。</p>
 
 <form action = "loginsuccess.php" method = "post">
 <dl class="profile">

@@ -22,6 +22,11 @@ echo "渡されたSQL文　".$tsql;
 <br>
 ↑ nameの後は「'」シングルクォートです。
 <br>
+SELECT * FROM maintb WHERE name ='○○' (maintbというテーブルからnameが○○の情報を抽出します。)
+<br>
+↑WHERE句が全てを意味するように○○に入力する。
+<br>
+
 
 <table border="1">
 <tr>
