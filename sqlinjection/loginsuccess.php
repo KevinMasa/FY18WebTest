@@ -7,7 +7,7 @@ header("Content-Type: text/html; charset=Shift_JIS");
 
 <head>
 <meta charset = "UFT-8">
-<title>SQL Injection</title>
+<title>SQLインジェクション(脆弱)</title>
 </head>
 
 <body>
