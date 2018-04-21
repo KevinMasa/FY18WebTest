@@ -29,7 +29,7 @@ $connectionOptions = array(
     "PWD" => "Fy18_test"
 );
 $conn = sqlsrv_connect($serverName, $connectionOptions);
-$tsql= "SELECT *FROM maintb WHERE name=".pg_escape_string($inputid);
+$tsql= "SELECT *FROM maintb WHERE name='".pg_escape_string($inputid)."'";
 echo "ìnÇ≥ÇÍÇΩSQLï∂Å@".$tsql;
 echo "<br>";
 
