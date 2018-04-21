@@ -15,10 +15,6 @@ header("Content-Type: text/html; charset=Shift_JIS");
 <h2>ログイン後ページ</h2>
 <p>
 <?php 
-$username = 'fy18admin@fy18myserver';
-$password = 'Fy18_admin';
-$db_name = 'maindb';
-$inputid = 'admin';
 
 $serverName = "fy18test.database.windows.net";
 $connectionOptions = array(
