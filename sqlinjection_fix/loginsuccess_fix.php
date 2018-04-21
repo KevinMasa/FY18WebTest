@@ -20,7 +20,7 @@ header("Content-Type: text/html; charset=Shift_JIS");
 <th>password</th>
 </tr>
 <?php 
-$inputid = array();
+$inputid = $_POST["id"];
 
 $serverName = "fy18test.database.windows.net";
 $connectionOptions = array(
@@ -29,7 +29,7 @@ $connectionOptions = array(
     "PWD" => "Fy18_test"
 );
 $conn = sqlsrv_connect($serverName, $connectionOptions);
-$tsql= array("SELECT *FROM maintb WHERE name=",$_POST["id"]);
+$tsql= "SELECT *FROM maintb WHERE name=".pg_escape_string($inputid);
 echo "ìnÇ≥ÇÍÇΩSQLï∂Å@".$tsql;
 echo "<br>";
 
