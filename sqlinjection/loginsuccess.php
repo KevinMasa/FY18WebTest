@@ -59,7 +59,41 @@ sqlsrv_free_stmt($getResults);
 //%' OR 1 = 1; -- %
 
 ?>
+
 </table>
+
+/*<?php 
+$inputid = $_POST["id"];
+
+$serverName = "fy18test.database.windows.net";
+$connectionOptions = array(
+    "Database" => "fy18test",
+    "Uid" => "fy18test",
+    "PWD" => "Fy18_test"
+);
+$conn = sqlsrv_connect($serverName, $connectionOptions);
+$tsql= "SELECT *FROM maintb WHERE name='".$inputid."'";
+
+
+$getResults= sqlsrv_query($conn, $tsql);
+
+
+if ($getResults == FALSE)
+    echo (sqlsrv_errors());
+while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
+ echo "<tr>";
+ echo "<td>".$row['id']."</td>";
+ echo "<td>".$row['name']."</td>";
+ echo "<td>".$row['password']."</td>";
+// echo ("id:".$row['name'] . " " . "password:".$row['password'] . PHP_EOL);
+ echo "</tr>";
+}
+sqlsrv_free_stmt($getResults);
+
+//%' OR 1 = 1; -- %
+
+?>*/
+
 
 </body>
 </html>

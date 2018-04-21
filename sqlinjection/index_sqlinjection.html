@@ -19,11 +19,22 @@ dl.profile dd{
 	padding: 10px 10px 10px 0px;
 }
 
+p{
+color:#ff0000;
+}
+
 </style>
 </head>
 
 <body>
-<h1>エイリアスを入力してユーザーの情報を確認しましょう</h1>
+<h2>SQLインジェクションの実践</h2>
+<h3>想定：アカウントのパスワードを確認できるDBがあるとします。</h3><br>
+<h3>各自のエイリアスを入力してパスワードを確認してみましょう。</h3><br>
+<h3>また、確認後のページでどんなSQL文が発行されているか確認し、</h3><br>
+<h3>DBの全ての情報を抽出するSQL文になるよう、エイリアスに入力してみましょう</h3><br>
+↓答え(例)：白抜き
+<p>' or 1 = 1 --</p>
+
 <form action = "loginsuccess.php" method = "post">
 <dl class="profile">
 <dt>エイリアス：</dt>
