@@ -1,4 +1,3 @@
-
 <?php
 header("Content-Type: text/html; charset=Shift_JIS");
 ?>
@@ -36,10 +35,5 @@ while ($row = mysqli_fetch_assoc($res)) {
 mysqli_close($conn);
 ?>
 
-
-<?php
- echo htmlspecialchars($_POST["comment"], ENT_QUOTES, "UTF-8"); 
- ?>
-</p>—l‚æ‚¤‚±‚»<br>
 </body>
 </html>

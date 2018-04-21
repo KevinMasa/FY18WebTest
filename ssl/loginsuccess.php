@@ -11,7 +11,7 @@ header("Content-Type: text/html; charset=Shift_JIS");
 
 <body>
 <h1>ユーザーIDとパスワードの送信</h1>
-<h2>ログイン後ペーｆｆｆｆｆｆｆｆｆｆｆｆジ</h2>
+<h2>ログイン後ページ</h2>
 <p>ユーザIDは：
 <?php
  echo htmlspecialchars($_POST["userid"], ENT_QUOTES, "UTF-8"); ?>
