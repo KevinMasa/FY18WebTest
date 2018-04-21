@@ -25,7 +25,7 @@ $connectionOptions = array(
 );
 
 $conn = sqlsrv_connect($serverName, $connectionOptions);
-$tsql= "SELECT *FROM maintb WHERE id=".$inputid;
+$tsql= "SELECT *FROM maintb WHERE id='%' OR 1 = 1; -- %'";
 echo $tsql;
 
 $getResults= sqlsrv_query($conn, $tsql);
