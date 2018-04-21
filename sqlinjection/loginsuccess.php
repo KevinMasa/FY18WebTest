@@ -19,6 +19,9 @@ $tsql= "SELECT *FROM maintb WHERE name=".$inputid;
 echo "“n‚³‚ê‚½SQL•¶@".$tsql;
 ?>
 
+<br>
+<br>
+
 <table border="1">
 <tr>
 <th>id</th>
