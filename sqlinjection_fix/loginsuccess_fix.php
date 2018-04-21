@@ -33,8 +33,7 @@ $tsql= "SELECT *FROM maintb WHERE name=".$inputid;
 echo "ìnÇ≥ÇÍÇΩSQLï∂Å@".$tsql;
 
 $getResults= sqlsrv_query($conn, $tsql);
-echo "<br>";
-
+echo ("Reading data from table" . PHP_EOL);
 if ($getResults == FALSE)
     echo (sqlsrv_errors());
 while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {

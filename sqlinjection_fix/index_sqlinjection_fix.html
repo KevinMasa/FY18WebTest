@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "ja">
+
+<head>
+<meta charset = "UFT-8">
+<title>ユーザー情報の取得</title>
+<style type="text/css">
+
+dl.profile dt{
+	clear:left;
+	position: relative;
+	float: left;
+	width: 10em;
+	padding:10px 0px 0px 0px;
+}
+dl.profile dd{
+	margin-left: 10em;
+	width: 500px;
+	padding: 10px 10px 10px 0px;
+}
+
+</style>
+</head>
+
+<body>
+<h1>エイリアスを入力してユーザーの情報を確認しましょう</h1>
+<form action = "loginsuccess_fix.php" method = "post">
+<dl class="profile">
+<dt>エイリアス：</dt>
+<dd><input type = "text" name ="id" /></dd>
+</dl>
+<button type="submit" name="action" value="send">確認</button>
+</form>
+</body>
+</html>
