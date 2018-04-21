@@ -15,7 +15,7 @@ header("Content-Type: text/html; charset=Shift_JIS");
 <h2>ログイン後ページ</h2>
 <p>
 <?php 
-
+$inputid = "admin";
 $serverName = "fy18test.database.windows.net";
 $connectionOptions = array(
     "Database" => "fy18test",
@@ -24,7 +24,7 @@ $connectionOptions = array(
 );
 
 $conn = sqlsrv_connect($serverName, $connectionOptions);
-$tsql= "SELECT *FROM maintb";
+$tsql= "SELECT *FROM maintb WHERE id=".$inputid;
 $getResults= sqlsrv_query($conn, $tsql);
 echo ("Reading data from table" . PHP_EOL);
 if ($getResults == FALSE)
