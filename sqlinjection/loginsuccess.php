@@ -36,6 +36,10 @@ while ($row = mysqli_fetch_assoc($res)) {
 mysqli_close($conn);
 ?>
 
+<?php 
+echo "aaaaaa";
+?>
+
 </p>
 </body>
 </html>
