@@ -26,13 +26,36 @@ body{
 </head>
 
 <body>
+<?php
 
+    $serverName1 = "fy18test.database.windows.net";
+$connectionOptions1 = array(
+    "Database" => "fy18test",
+    "Uid" => "fy18test",
+    "PWD" => "Fy18_test"
+);
+
+$conn1 = sqlsrv_connect($serverName1, $connectionOptions1);
+$tsql1 = "select * from keijiban";
+
+$getResults1= sqlsrv_query($conn1, $tsql1);
+if ($getResults1 == FALSE)
+    echo (sqlsrv_errors());
+
+while (sqlsrv_fetch($getResults1) === true) {
+echo "<p>".sqlsrv_get_field($getResults1, 2)."</p>";
+echo "<p>投稿者:".sqlsrv_get_field($getResults1, 0)."</p>";
+echo "<p>内容:</p>";
+echo "<p>".sqlsrv_get_field($getResults1, 1)."</p>";
+echo "<hr>";
+}
+sqlsrv_free_stmt($getResults1); 
+sqlsrv_close( $conn1);
+echo "<hr>";
+?>
 <h3>クロスサイトスクリプティングのサンプルページです。</h3>
 
 <h1>掲示板</h1>
-       <form action="index_keijiban.php" method="">
-      	  <input type="submit" value="更新">
-      </form>
 <section>
     <h2>新規投稿</h2>
         <form action="" method="post">
@@ -82,33 +105,7 @@ exit();
 
 <section class="toukou">
     <h2 >投稿一覧</h2>
-<?php
 
-    $serverName1 = "fy18test.database.windows.net";
-$connectionOptions1 = array(
-    "Database" => "fy18test",
-    "Uid" => "fy18test",
-    "PWD" => "Fy18_test"
-);
-
-$conn1 = sqlsrv_connect($serverName1, $connectionOptions1);
-$tsql1 = "select * from keijiban";
-
-$getResults1= sqlsrv_query($conn1, $tsql1);
-if ($getResults1 == FALSE)
-    echo (sqlsrv_errors());
-
-while (sqlsrv_fetch($getResults1) === true) {
-echo "<p>".sqlsrv_get_field($getResults1, 2)."</p>";
-echo "<p>投稿者:".sqlsrv_get_field($getResults1, 0)."</p>";
-echo "<p>内容:</p>";
-echo "<p>".sqlsrv_get_field($getResults1, 1)."</p>";
-echo "<hr>";
-}
-sqlsrv_free_stmt($getResults1); 
-sqlsrv_close( $conn1);
-echo "<hr>";
-?>
 </section>
 </body>
 </html>
