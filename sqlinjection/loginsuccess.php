@@ -16,7 +16,7 @@ header("Content-Type: text/html; charset=UTF-8");
 <?php 
 $inputid = $_POST["id"];
 $tsql= "SELECT *FROM maintb WHERE name='".$inputid."'";
-echo "渡されたSQL文　".htmlspecialchars($tsql,ENT_QUOTES);
+echo "渡されたSQL文　「".htmlspecialchars($tsql,ENT_QUOTES)."」";
 
 ?>
 <br>
@@ -24,7 +24,8 @@ echo "渡されたSQL文　".htmlspecialchars($tsql,ENT_QUOTES);
 <br>
 SELECT * FROM maintb WHERE name ='○○' (maintbというテーブルからnameが○○の情報を抽出します。)
 <br>
-↑WHERE句が全てを意味するように○○に入力する。
+WHERE句が全てを意味するように○○に入力する。
+<br>
 <br>
 
 
