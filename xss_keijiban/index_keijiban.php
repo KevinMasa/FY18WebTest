@@ -7,7 +7,7 @@ header("Content-Type: text/html; charset=Shift_JIS");
 
 <head>
 <meta charset = "UTF-8">
-<title>Œf¦”Â</title>
+<title>æ²ç¤ºæ¿</title>
 <style type="text/css">
 body{
     text-align:center;
@@ -27,23 +27,23 @@ body{
 
 <body>
 
-<h3>ƒNƒƒXƒTƒCƒgƒXƒNƒŠƒvƒeƒBƒ“ƒO‚ÌƒTƒ“ƒvƒ‹ƒy[ƒW‚Å‚·B</h3>
+<h3>ã‚¯ãƒ­ã‚¹ã‚µã‚¤ãƒˆã‚¹ã‚¯ãƒªãƒ—ãƒ†ã‚£ãƒ³ã‚°ã®ã‚µãƒ³ãƒ—ãƒ«ãƒšãƒ¼ã‚¸ã§ã™ã€‚</h3>
 
-<h1>Œf¦”Â</h1>
+<h1>æ²ç¤ºæ¿</h1>
 <section>
-    <h2>V‹K“Še</h2>
+    <h2>æ–°è¦æŠ•ç¨¿</h2>
         <form action="" method="post">
-               <div class="name"><span class="label">‚¨–¼‘O(32•¶šˆÈ“à):</span><input type="text" name="name" value=""></div></br>
-        <div class="honbun"><span class="label">–{•¶(200•¶šˆÈ“à):</span><textarea name="comment" cols="30" rows="3" maxlength="80" wrap="hard" placeholder="200šˆÈ“à‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B"></textarea></div>
-        <input type="submit" value="“Še">
+               <div class="name"><span class="label">ãŠåå‰(32æ–‡å­—ä»¥å†…):</span><input type="text" name="name" value=""></div></br>
+        <div class="honbun"><span class="label">æœ¬æ–‡(200æ–‡å­—ä»¥å†…):</span><textarea name="comment" cols="30" rows="3" maxlength="80" wrap="hard" placeholder="200å­—ä»¥å†…ã§å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚"></textarea></div>
+        <input type="submit" value="æŠ•ç¨¿">
     </form>
 </section>
 <section class="toukou">
-    <h2 >“Šeˆê——</h2>
+    <h2 >æŠ•ç¨¿ä¸€è¦§</h2>
 <!--
 <?php
      if(isset($_POST['comment'])){
-         echo "<p>“Še‚Í‚Ü‚¾‚ ‚è‚Ü‚¹‚ñ</p>";
+         echo "<p>æŠ•ç¨¿ã¯ã¾ã ã‚ã‚Šã¾ã›ã‚“</p>";
      }else{
 $personal_name = "'".$_POST['name']."'";
 $personal_comment = "'".$_POST['comment']."'";
@@ -67,12 +67,12 @@ if ($getResults == FALSE)
 
 
 $data = "<hr>\r\n";
-$data = $data."<p>“ŠeÒ:".$personal_name."</p>\r\n";
-$data = $data."<p>“à—e:</p>\r\n";
+$data = $data."<p>æŠ•ç¨¿è€…:".$personal_name."</p>\r\n";
+$data = $data."<p>å†…å®¹:</p>\r\n";
 $data = $data."<p>".$contents."</p>\r\n";
 
-print('<p>“ŠeÒ:'.$personal_name.'</p>');
-print('<p>“à—e:</p>');
+print('<p>æŠ•ç¨¿è€…:'.$personal_name.'</p>');
+print('<p>å†…å®¹:</p>');
 print('<p>'.$contents.'</p>');
 ?>
 -->

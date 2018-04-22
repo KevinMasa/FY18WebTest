@@ -6,22 +6,22 @@ header("Content-Type: text/html; charset=Shift_JIS");
 <html lang = "ja">
 
 <head>
-<title>ƒƒOƒCƒ“Œãƒy[ƒW</title>
+<title>ãƒ­ã‚°ã‚¤ãƒ³å¾Œãƒšãƒ¼ã‚¸</title>
 </head>
 
 <body>
-<h1>ƒ†[ƒU[ID‚ÆƒpƒXƒ[ƒh‚Ì‘—M</h1>
-<h2>ƒƒOƒCƒ“Œãƒy[ƒW</h2>
-<p>ƒ†[ƒUID‚ÍF
+<h1>ãƒ¦ãƒ¼ã‚¶ãƒ¼IDã¨ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã®é€ä¿¡</h1>
+<h2>ãƒ­ã‚°ã‚¤ãƒ³å¾Œãƒšãƒ¼ã‚¸</h2>
+<p>ãƒ¦ãƒ¼ã‚¶IDã¯ï¼š
 <?php
  echo htmlspecialchars($_POST["userid"], ENT_QUOTES, "UTF-8"); ?>
 </p><br>
-<p>ƒpƒXƒ[ƒh‚ÍF
+<p>ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã¯ï¼š
 <?php
  echo htmlspecialchars($_POST["pass"], ENT_QUOTES, "UTF-8"); ?>
 </p><br>
 
-<input value="‚à‚Ç‚é" onclick="history.back();" type="button">
+<input value="ã‚‚ã©ã‚‹" onclick="history.back();" type="button">
 
 </body>
 </html>

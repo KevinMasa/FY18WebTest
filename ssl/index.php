@@ -7,7 +7,7 @@ header("Content-Type: text/html; charset=Shift_JIS");
 <html lang = "ja">
 
 <head>
-<title>HTTP��HTTPS�ʐM���e�̈Ⴂ</title>
+<title>HTTPとHTTPS通信内容の違い</title>
 <style type="text/css">
 
 dl.profile dt{
@@ -27,24 +27,24 @@ dl.profile dd{
 </head>
 
 <body>
-<h3>HTTP��HTTPS�ʐM���e�̈Ⴂ</h3>
-<h3>���̃y�[�W��http://��https://�̂��ꂼ��ŃA�N�Z�X��</h3></br>
-<h3>���O�C�������āAWireShark�ŒʐM���e���m�F���Ă݂܂��傤�B</h3></br>
+<h3>HTTPとHTTPS通信内容の違い</h3>
+<h3>このページにhttp://とhttps://のそれぞれでアクセスし</h3></br>
+<h3>ログインをして、WireSharkで通信内容を確認してみましょう。</h3></br>
 
 <h3>
-�@Wireshark���N��</br>
-�A �L���v�`��->WiFi���_�u���N���b�N</br>
-�B �㕔�̕\���t�B���^�Ɂuhttp�v��ݒ�</br>
-�C http://fy18test.azurewebsites.net/ssl/index.php �@�փA�N�Z�X</br>
-�D �u���[�U�[���v�Ɓu�p�X���[�h�v����͂��ă��O�C���i�e�L�g�E��ok�j</br>
-�E Wireshark��POST���Ă���ʐM���m�F</br>
+①Wiresharkを起動</br>
+② キャプチャ->WiFiをダブルクリック</br>
+③ 上部の表示フィルタに「http」を設定</br>
+④ http://fy18test.azurewebsites.net/ssl/index.php 　へアクセス</br>
+⑤ 「ユーザー名」と「パスワード」を入力してログイン（テキトウでok）</br>
+⑥ WiresharkでPOSTしている通信を確認</br>
 </h3></br>
 
 </hr></br>
-<h4>���[�U���ƃp�X���[�h����͂��Ă�������</h4>
+<h4>ユーザ名とパスワードを入力してください</h4>
 <form action = "loginsuccess.php" method = "post">
 <dl class="profile">
-<dt>���[�U���F</dt>
+<dt>ユーザ名：</dt>
 <dd><input type = "text" name ="userid"></dd>
 
 <script>
@@ -58,10 +58,10 @@ function checkPassword(e) {
 }
 </script>
 
-<dt>�p�X���[�h�F</dt>
-<dd><input type="password" id="password" name ="pass" /> <input type="checkbox" onclick="checkPassword(this)" />�p�X���[�h��\��</dd>
+<dt>パスワード：</dt>
+<dd><input type="password" id="password" name ="pass" /> <input type="checkbox" onclick="checkPassword(this)" />パスワードを表示</dd>
 </dl>
-<button type="submit" name="action" value="send">���O�C��</button>
+<button type="submit" name="action" value="send">ログイン</button>
 </form>
 
 </body>

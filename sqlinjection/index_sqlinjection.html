@@ -3,7 +3,7 @@
 
 <head>
 <meta charset = "UTF-8">
-<title>SQL�C���W�F�N�V����(�Ǝ�)</title>
+<title>SQLインジェクション(脆弱)</title>
 <style type="text/css">
 
 dl.profile dt{
@@ -26,23 +26,23 @@ p{
 </head>
 
 <body>
-<h2>SQL�C���W�F�N�V�����̎��H</h2>
-<h3>�z��F�A�J�E���g�̃p�X���[�h���m�F�ł���DB������Ƃ��܂��B</h3>
-<h3>�e���̃G�C���A�X����͂��ăp�X���[�h���m�F���Ă݂܂��傤�B</h3>
-<h3>�܂��A�m�F��̃y�[�W�łǂ��SQL�������s����Ă��邩�m�F���A</h3>
-<h3>DB�̑S�Ă̏��𒊏o����SQL���ɂȂ�悤�A�G�C���A�X�ɓ��͂��Ă݂܂��傤</h3>
-������(��)�F������
+<h2>SQLインジェクションの実践</h2>
+<h3>想定：アカウントのパスワードを確認できるDBがあるとします。</h3>
+<h3>各自のエイリアスを入力してパスワードを確認してみましょう。</h3>
+<h3>また、確認後のページでどんなSQL文が発行されているか確認し、</h3>
+<h3>DBの全ての情報を抽出するSQL文になるよう、エイリアスに入力してみましょう</h3>
+↓答え(例)：白抜き
 <p>' or 1 = 1 --</p>
-<p>�u'�v��name=''�ɂȂ�̂ł��̏������U�Ƃ��ďI��点�āA</p>
-<p>���̌�or 1 = 1 �Ƒ����邱�ƂŁA1=1�Ő��ƂȂ�WHERE�傪�S�ĂƂ���悤�ɂȂ�B</p>
-<p>�Ō��--��t���Ă���ȍ~�����s����Ȃ��悤�ɂ��邱�Ƃŕ���u'�v�𖳌�������B(��������Ȃ��Ɓu'�v�̐������������̂�SQL�����G���[�ɂȂ�)</p>
+<p>「'」でname=''になるのでこの条件を偽として終わらせて、</p>
+<p>その後or 1 = 1 と続けることで、1=1で正となりWHERE句が全てとおるようになる。</p>
+<p>最後に--を付けてそれ以降を実行されないようにすることで閉じる「'」を無効化する。(これをしないと「'」の数がおかしいのでSQL文がエラーになる)</p>
 
 <form action = "loginsuccess.php" method = "post">
 <dl class="profile">
-<dt>�G�C���A�X�F</dt>
+<dt>エイリアス：</dt>
 <dd><input type = "text" name ="id" /></dd>
 </dl>
-<button type="submit" name="action" value="send">�m�F</button>
+<button type="submit" name="action" value="send">確認</button>
 </form>
 </body>
 </html>

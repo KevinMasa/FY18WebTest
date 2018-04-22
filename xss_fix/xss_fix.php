@@ -7,7 +7,7 @@ header("Content-Type: text/html; charset=Shift_JIS");
 
 <head>
 <meta charset = "UTF-8">
-<title>XSS(‘Îô)</title>
+<title>XSS(å¯¾ç­–)</title>
 </head>
 
 <body>

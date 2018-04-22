@@ -11,16 +11,16 @@ header("Content-Type: text/html; charset=Shift_JIS");
 </head>
 
 <body>
-<h2>�A�J�E���g���̎擾</h2>
+<h2>アカウント情報の取得</h2>
 
 <?php 
 $inputid = $_POST["id"];
 $tsql= "SELECT *FROM maintb WHERE name='".pg_escape_string($inputid)."'";
-echo "�n���ꂽSQL���@".$tsql;
+echo "渡されたSQL文　".$tsql;
 ?>
 <br>
-<p>���͂��ꂽ�u'�v�V���O���N�H�[�e�[�V�������J��Ԃ��G�X�P�[�v���������邱�ƂŁA</p>
-<p>SQL���œ��ʂȈӖ������L�������ʂ̕����Ƃ��ĉ��߂����悤�ɏ������Ă��܂��B</p>
+<p>入力された「'」シングルクォーテーションを繰り返すエスケープ処理をすることで、</p>
+<p>SQL文で特別な意味を持つ記号が普通の文字として解釈されるように処理しています。</p>
 <br>
 
 
@@ -65,7 +65,7 @@ sqlsrv_free_stmt($getResults);
 
 </table>
 
-<!-- php�R�[�h��
+<!-- phpコード↓
 
 $inputid = $_POST["id"];
 

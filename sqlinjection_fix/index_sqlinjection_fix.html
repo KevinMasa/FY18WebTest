@@ -3,7 +3,7 @@
 
 <head>
 <meta charset = "UTF-8">
-<title>���[�U�[���̎擾</title>
+<title>ユーザー情報の取得</title>
 <style type="text/css">
 
 dl.profile dt{
@@ -23,16 +23,16 @@ dl.profile dd{
 </head>
 
 <body>
-<h2>SQL�C���W�F�N�V�����̑΍�</h2>
-<h3>SQL�C���W�F�N�V�����̎��{�y�[�W�œ��͂����l����͂�</h3>
-<h3>�m�F��̃y�[�W�łǂ��SQL�������s����Ă��邩�m�F���܂��傤�B</h3>
+<h2>SQLインジェクションの対策</h2>
+<h3>SQLインジェクションの実施ページで入力した値を入力し</h3>
+<h3>確認後のページでどんなSQL文が発行されているか確認しましょう。</h3>
 
 <form action = "loginsuccess_fix.php" method = "post">
 <dl class="profile">
-<dt>�G�C���A�X�F</dt>
+<dt>エイリアス：</dt>
 <dd><input type = "text" name ="id" /></dd>
 </dl>
-<button type="submit" name="action" value="send">�m�F</button>
+<button type="submit" name="action" value="send">確認</button>
 </form>
 </body>
 </html>

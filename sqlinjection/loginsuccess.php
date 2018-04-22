@@ -7,24 +7,24 @@ header("Content-Type: text/html; charset=Shift_JIS");
 
 <head>
 <meta charset = "UTF-8">
-<title>SQL�C���W�F�N�V����(�Ǝ�)</title>
+<title>SQLインジェクション(脆弱)</title>
 </head>
 
 <body>
-<h2>�A�J�E���g���̎擾</h2>
+<h2>アカウント情報の取得</h2>
 
 <?php 
 $inputid = $_POST["id"];
 $tsql= "SELECT *FROM maintb WHERE name='".$inputid."'";
-echo "�n���ꂽSQL���@".htmlspecialchars($tsql,ENT_QUOTES);
+echo "渡されたSQL文　".htmlspecialchars($tsql,ENT_QUOTES);
 
 ?>
 <br>
-�� name�̌�́u'�v�V���O���N�H�[�g�ł��B
+↑ nameの後は「'」シングルクォートです。
 <br>
-SELECT * FROM maintb WHERE name ='����' (maintb�Ƃ����e�[�u������name�������̏��𒊏o���܂��B)
+SELECT * FROM maintb WHERE name ='○○' (maintbというテーブルからnameが○○の情報を抽出します。)
 <br>
-��WHERE�傪�S�Ă��Ӗ�����悤�Ɂ����ɓ��͂���B
+↑WHERE句が全てを意味するように○○に入力する。
 <br>
 
 
@@ -68,7 +68,7 @@ sqlsrv_free_stmt($getResults);
 
 </table>
 
-<!--php�R�[�h��
+<!--phpコード↓
 
 $inputid = $_POST["id"];
 
