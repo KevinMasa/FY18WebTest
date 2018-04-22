@@ -83,8 +83,6 @@ exit();
     <h2 >投稿一覧</h2>
 <?php
 
-$nowdate = "'".date("Y-m-d H:i:s")."'";
-echo $nowdate;
     $serverName1 = "fy18test.database.windows.net";
 $connectionOptions1 = array(
     "Database" => "fy18test",
@@ -95,6 +93,7 @@ $connectionOptions1 = array(
 $conn1 = sqlsrv_connect($serverName1, $connectionOptions1);
 $tsql1 = "select * from keijiban";
 
+echo "<hr>";
 $getResults1= sqlsrv_query($conn1, $tsql1);
 if ($getResults1 == FALSE)
     echo (sqlsrv_errors());
@@ -107,7 +106,6 @@ echo "<hr>";
 }
 sqlsrv_free_stmt($getResults1);
 
-echo "<hr>";
 ?>
 </section>
 </body>
