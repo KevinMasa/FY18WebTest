@@ -37,12 +37,12 @@ body{
     <h2>新規投稿</h2>
         <form action="" method="post">
                <div class="name">
-                <span class="label">お名前(32文字以内):</span>
+                <span class="label">お名前:</span>
                	<input type="text" name="name" value="">
                </div></br>
         <div class="honbun">
-          <span class="label">本文(200文字以内):</span>
-          <textarea name="comment" cols="30" rows="3" maxlength="80" wrap="hard" placeholder="200字以内で入力してください。"></textarea>
+          <span class="label">本文:</span>
+          <textarea name="comment" cols="30" rows="3" maxlength="80" wrap="hard"></textarea>
         </div>
         <input type="submit" value="投稿">
     </form>
