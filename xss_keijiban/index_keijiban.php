@@ -47,7 +47,7 @@ body{
 <section class="toukou">
     <h2 >投稿一覧</h2>
 <?php
-     if(isset($_POST['comment'])){
+     if(!isset($_POST['comment'])){
          echo "<p>投稿はまだありません</p>";
      }else{
      echo "<p>投稿はありmaaaaasy</p>";
