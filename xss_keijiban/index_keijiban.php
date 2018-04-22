@@ -44,38 +44,8 @@ body{
         <input type="submit" value="投稿">
     </form>
 </section>
-<section class="toukou">
-    <h2 >投稿一覧</h2>
-           <form action="index_keijiban.php" method="">
-          	  <input type="submit" value="更新">
- 		   </form>
-<?php
-    $serverName = "fy18test.database.windows.net";
-$connectionOptions = array(
-    "Database" => "fy18test",
-    "Uid" => "fy18test",
-    "PWD" => "Fy18_test"
-);
 
-$conn = sqlsrv_connect($serverName, $connectionOptions);
-$tsql= "SELECT * FROM keijiban";
 
-$getResults= sqlsrv_query($conn, $tsql);
-echo $getResults; 
-if ($getResults == FALSE)
-    echo (sqlsrv_errors());
-while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
-echo "<p>".$row['time']."</p>";
-echo "<p>投稿者:".$row['name']."</p>";
-echo "<p>内容:</p>";
-echo "<p>".$row['contents']."</p>";
-echo "<hr>";
-}
-echo $row;
-sqlsrv_free_stmt($getResults);
-
-?>
- 		   
 <?php
      if(!isset($_POST['comment'])){
      }else{
@@ -105,6 +75,38 @@ header('Location: index_keijiban.php');
 exit();
 
 }
+?>
+
+<section class="toukou">
+    <h2 >投稿一覧</h2>
+           <form action="index_keijiban.php" method="">
+          	  <input type="submit" value="更新">
+ 		   </form>
+<?php
+    $serverName = "fy18test.database.windows.net";
+$connectionOptions = array(
+    "Database" => "fy18test",
+    "Uid" => "fy18test",
+    "PWD" => "Fy18_test"
+);
+
+$conn = sqlsrv_connect($serverName, $connectionOptions);
+$tsql= "SELECT * FROM keijiban";
+
+$getResults= sqlsrv_query($conn, $tsql);
+ 
+if ($getResults == FALSE)
+    echo (sqlsrv_errors());
+while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
+echo "<p>".$row['time']."</p>";
+echo "<p>投稿者:".$row['name']."</p>";
+echo "<p>内容:</p>";
+echo "<p>".$row['contents']."</p>";
+echo "<hr>";
+}
+echo $row;
+sqlsrv_free_stmt($getResults);
+
 ?>
 </section>
 </body>
