@@ -102,10 +102,10 @@ echo $row1;
 
 
 while ($row1 = sqlsrv_fetch_array($getResults1, SQLSRV_FETCH_ASSOC)) {
-echo "<p>".$row1['time']."</p>";
-echo "<p>投稿者:".$row1['name']."</p>";
+echo "<p>".$row1['TIME']."</p>";
+echo "<p>投稿者:".$row1['NAME']."</p>";
 echo "<p>内容:</p>";
-echo "<p>".$row1['contents']."</p>";
+echo "<p>".$row1['CONTENTS']."</p>";
 echo "<hr>";
 }
 sqlsrv_free_stmt($getResults1);
