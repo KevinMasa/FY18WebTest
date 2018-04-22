@@ -91,16 +91,16 @@ $connectionOptions1 = array(
 );
 
 $conn1 = sqlsrv_connect($serverName1, $connectionOptions1);
-$tsql1 = "select * from maintb";
+$tsql1 = "select * from keijiban";
 
 $getResults1= sqlsrv_query($conn1, $tsql1);
 if ($getResults1 == FALSE)
     echo (sqlsrv_errors());
 
 while (sqlsrv_fetch($getResults1) === true) {
-echo "<p>".sqlsrv_get_field($getResults1, 0)."</p>";
-echo "<p>投稿者:".sqlsrv_get_field($getResults1, 1)."</p>";
+echo "<p>投稿者:".sqlsrv_get_field($getResults1, 0)."</p>";
 echo "<p>内容:</p>";
+echo "<p>".sqlsrv_get_field($getResults1, 1)."</p>";
 echo "<p>".sqlsrv_get_field($getResults1, 2)."</p>";
 echo "<hr>";
 }
