@@ -70,6 +70,7 @@ echo "<p>内容:</p>";
 echo "<p>".$row['contents']."</p>";
 echo "<hr>";
 }
+echo $row;
 sqlsrv_free_stmt($getResults);
 
 ?>
@@ -94,7 +95,6 @@ $personal_comment = "'".$_POST['comment']."'";
 $nowdate = date("Y-m-d");
 $nowtime = date("G:i:s");
 $now = "'".$nowdate." ".$nowtime."'";
-echo $now;
 
 
 $serverName = "fy18test.database.windows.net";
