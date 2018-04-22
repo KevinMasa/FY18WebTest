@@ -99,6 +99,12 @@ if ($getResults1 == FALSE)
     echo (sqlsrv_errors());
     $row1 = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC);
 echo $row1;    
+echo "<p>".$row1['time']."</p>";
+echo "<p>投稿者:".$row1['name']."</p>";
+echo "<p>内容:</p>";
+echo "<p>".$row1['contents']."</p>";
+echo "<hr>";
+
 while ($row1 = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
 echo "<p>".$row1['time']."</p>";
 echo "<p>投稿者:".$row1['name']."</p>";
