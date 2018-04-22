@@ -59,9 +59,9 @@ $connectionOptions = array(
 
 $conn = sqlsrv_connect($serverName, $connectionOptions);
 $tsql= "SELECT * FROM keijiban";
-echo $tsql;
-$getResults= sqlsrv_query($conn, $tsql);
 
+$getResults= sqlsrv_query($conn, $tsql);
+echo $getResults;
 if ($getResults == FALSE)
     echo (sqlsrv_errors());
 while ($getResults = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
