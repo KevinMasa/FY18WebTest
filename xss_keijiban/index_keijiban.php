@@ -52,9 +52,7 @@ body{
      
 $personal_name = "'".$_POST['name']."'";
 $personal_comment = "'".$_POST['comment']."'";
-$nowdate = date("Y-m-d");
-$nowtime = date("G:i:s");
-$now = "'".$nowdate." ".$nowtime."'";
+$nowdate = date("Y-m-d G:i:s");
 
 
 $serverName = "fy18test.database.windows.net";
@@ -64,7 +62,7 @@ $connectionOptions = array(
     "PWD" => "Fy18_test"
 );
 $conn = sqlsrv_connect($serverName, $connectionOptions);
-$tsql= "INSERT INTO keijiban(name,contents,time) VALUES($personal_name,$personal_comment,$now)";
+$tsql= "INSERT INTO keijiban(name,contents,time) VALUES($personal_name,$personal_comment,$nowdate)";
 
 $getResults= sqlsrv_query($conn, $tsql);
 
