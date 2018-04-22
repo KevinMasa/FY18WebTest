@@ -11,8 +11,9 @@ header("Content-Type: text/html; charset=UTF-8");
 </head>
 
 <body>
-<h2></h2>
+<h2>XSS対策前ページ</h2>
 <p>
+下に入力した文字が表示されます。<br>
 <?php 
  print $_POST["value"];
 

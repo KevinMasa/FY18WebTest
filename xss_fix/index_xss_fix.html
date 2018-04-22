@@ -12,14 +12,12 @@
 
 <body>
 
-<h3>クロスサイトスクリプティングのサンプルページです。</h3>
+<h3>XSS対策後ページ</h3>
+<p>ボタンを押すと、入力した文字をそのまま表示させます。</p>
 
 <form action = "xss_fix.php" method = "post">
-<dl class="profile">
-<dt>入力：</dt>
-<dd><input type = "text" name ="value" /></dd>
-</dl>
-<button type="submit" name="action" value="send">送る</button>
+入力：<input type = "text" name ="value" />
+<button type="submit" name="action" value="send">表示</button>
 </form>
 
 </body>
