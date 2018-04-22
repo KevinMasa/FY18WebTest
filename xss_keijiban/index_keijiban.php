@@ -97,7 +97,6 @@ $getResults1= sqlsrv_query($conn1, $tsql1);
 if ($getResults1 == FALSE)
     echo (sqlsrv_errors());
 
-echo "<hr>";
 while ($row1 = sqlsrv_fetch_array($getResults1, SQLSRV_FETCH_ASSOC)) {
 echo "<p>".$row1['time']."</p>";
 echo "<p>投稿者:".$row1['name']."</p>";
@@ -107,6 +106,7 @@ echo "<hr>";
 }
 sqlsrv_free_stmt($getResults1);
 
+echo "<hr>";
 ?>
 </section>
 </body>
