@@ -75,17 +75,6 @@ sqlsrv_free_stmt($getResults);
 
 ?>
  		   
- 		   
-<?php
-	if(!isset($_GET['reload'])){
-		
-	}else{
-	   
-header('Location: index_keijiban.php');
-exit();
-	}
-?>
- 		   
 <?php
      if(!isset($_POST['comment'])){
      }else{
