@@ -62,27 +62,6 @@ exit();
  		   
 <?php
      if(!isset($_POST['comment'])){
-$serverName = "fy18test.database.windows.net";
-$connectionOptions = array(
-    "Database" => "fy18test",
-    "Uid" => "fy18test",
-    "PWD" => "Fy18_test"
-);
-$conn = sqlsrv_connect($serverName, $connectionOptions);
-$tsql= "SELECT * FROM keijiban";
-
-$getResults= sqlsrv_query($conn, $tsql);
-
-if ($getResults == FALSE)
-    echo (sqlsrv_errors());
-while ($getResults = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
-echo "<p>.$getResults['time'].</p>"
-echo "<p>投稿者:".$getResults['name']."</p>";
-echo "<p>内容:</p>";
-echo "<p>".$getResults['contents']."</p>";
- echo "<hr>";
-}
-
     
      }else{
      
