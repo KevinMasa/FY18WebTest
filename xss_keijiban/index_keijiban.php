@@ -50,18 +50,7 @@ body{
           	  <input type="submit" name="reload" value="更新">
  		   </form>
 <?php
-	if(!isset($_GET['reload'])){
-		
-	}else{
-	   
-header('Location: index_keijiban.php');
-exit();
-	}
-?>
- 		   
- 		   
-<?php
-     if(!isset($_POST['comment'])){
+
     $serverName = "fy18test.database.windows.net";
 $connectionOptions = array(
     "Database" => "fy18test",
@@ -83,6 +72,22 @@ echo "<p>".$getResults['contents']."</p>";
 echo "<hr>";
 }
 sqlsrv_free_stmt($getResults);
+
+?>
+ 		   
+ 		   
+<?php
+	if(!isset($_GET['reload'])){
+		
+	}else{
+	   
+header('Location: index_keijiban.php');
+exit();
+	}
+?>
+ 		   
+<?php
+     if(!isset($_POST['comment'])){
      }else{
      
 $personal_name = "'".$_POST['name']."'";
