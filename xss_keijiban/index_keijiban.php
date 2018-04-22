@@ -83,29 +83,28 @@ exit();
           	  <input type="submit" value="更新">
  		   </form>
 <?php
-    $serverName = "fy18test.database.windows.net";
-$connectionOptions = array(
+    $serverName1 = "fy18test.database.windows.net";
+$connectionOptions1 = array(
     "Database" => "fy18test",
     "Uid" => "fy18test",
     "PWD" => "Fy18_test"
 );
 
-$conn = sqlsrv_connect($serverName, $connectionOptions);
-$tsql= "SELECT * FROM keijiban";
+$conn1 = sqlsrv_connect($serverName1, $connectionOptions1);
+$tsql1 = "SELECT * FROM keijiban";
 
-$getResults= sqlsrv_query($conn, $tsql);
+$getResults1= sqlsrv_query($conn1, $tsql1);
  
-if ($getResults == FALSE)
+if ($getResults1 == FALSE)
     echo (sqlsrv_errors());
-while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
-echo "<p>".$row['time']."</p>";
-echo "<p>投稿者:".$row['name']."</p>";
+while ($row1 = sqlsrv_fetch_array($getResults1, SQLSRV_FETCH_ASSOC)) {
+echo "<p>".$row1['time']."</p>";
+echo "<p>投稿者:".$row1['name']."</p>";
 echo "<p>内容:</p>";
-echo "<p>".$row['contents']."</p>";
+echo "<p>".$row1['contents']."</p>";
 echo "<hr>";
 }
-echo $row;
-sqlsrv_free_stmt($getResults);
+sqlsrv_free_stmt($getResults1);
 
 ?>
 </section>
