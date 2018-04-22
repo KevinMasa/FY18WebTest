@@ -77,12 +77,9 @@ exit();
 
 <section class="toukou">
     <h2 >投稿一覧</h2>
-           <form action="index_keijiban.php" method="">
-          	  <input type="submit" value="更新">
- 		   </form>
 <?php
 
-$nowdate = "'".date("Y-m-d G:i:s")."'";
+$nowdate = "'".date("Y-m-d H:i:s")."'";
 echo $nowdate;
     $serverName1 = "fy18test.database.windows.net";
 $connectionOptions1 = array(
