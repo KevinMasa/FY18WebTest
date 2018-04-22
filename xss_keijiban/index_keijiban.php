@@ -71,14 +71,9 @@ if ($getResults == FALSE)
     echo (sqlsrv_errors());
 
 
-$data = "<hr>\r\n";
-$data = $data."<p>投稿者:".$personal_name."</p>\r\n";
-$data = $data."<p>内容:</p>\r\n";
-$data = $data."<p>".$contents."</p>\r\n";
-
 print('<p>投稿者:'.$personal_name.'</p>');
 print('<p>内容:</p>');
-print('<p>'.$contents.'</p>');
+print('<p>'.$personal_comment.'</p>');
 }
 ?>
 </section>
