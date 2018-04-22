@@ -98,10 +98,10 @@ if ($getResults1 == FALSE)
     echo (sqlsrv_errors());
 
 while (sqlsrv_fetch($getResults1) === true) {
-echo "<p>".sqlsrv_get_field($getResults1, 2)."</p>";
-echo "<p>投稿者:".sqlsrv_get_field($getResults1, 0)."</p>";
+echo "<p>".sqlsrv_get_field($getResults1, 0)."</p>";
+echo "<p>投稿者:".sqlsrv_get_field($getResults1, 1)."</p>";
 echo "<p>内容:</p>";
-echo "<p>".sqlsrv_get_field($getResults1, 1)."</p>";
+echo "<p>".sqlsrv_get_field($getResults1, 2)."</p>";
 echo "<hr>";
 }
 sqlsrv_free_stmt($getResults1); 
