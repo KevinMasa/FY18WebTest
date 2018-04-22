@@ -26,7 +26,13 @@ body{
 </head>
 
 <body>
-<p>
+
+<h3>クロスサイトスクリプティングのサンプルページです。</h3>
+
+<h1>掲示板</h1>
+
+<section class="toukou">
+    <h2 >投稿一覧</h2>
 <?php
 
     $serverName1 = "fy18test.database.windows.net";
@@ -54,60 +60,6 @@ sqlsrv_free_stmt($getResults1);
 sqlsrv_close( $conn1);
 echo "<hr>";
 ?>
-</p>
-<h3>クロスサイトスクリプティングのサンプルページです。</h3>
-
-<h1>掲示板</h1>
-<section>
-    <h2>新規投稿</h2>
-        <form action="" method="post">
-               <div class="name">
-                <span class="label">お名前(32文字以内):</span>
-               	<input type="text" name="name" value="">
-               </div></br>
-        <div class="honbun">
-          <span class="label">本文(200文字以内):</span>
-          <textarea name="comment" cols="30" rows="3" maxlength="80" wrap="hard" placeholder="200字以内で入力してください。"></textarea>
-        </div>
-        <input type="submit" value="投稿">
-    </form>
-</section>
-
-
-<?php
-     if(!isset($_POST['comment'])){
-     }else{
-     
-$personal_name = "'".$_POST['name']."'";
-$personal_comment = "'".$_POST['comment']."'";
-date_default_timezone_set('Asia/Tokyo');
-$nowdate = "'".date("Y-m-d G:i:s")."'";
-echo $nowdate;
-
-$serverName = "fy18test.database.windows.net";
-$connectionOptions = array(
-    "Database" => "fy18test",
-    "Uid" => "fy18test",
-    "PWD" => "Fy18_test"
-);
-$conn = sqlsrv_connect($serverName, $connectionOptions);
-$tsql= "INSERT INTO keijiban(name,contents,time) VALUES($personal_name,$personal_comment,$nowdate)";
-
-$getResults= sqlsrv_query($conn, $tsql);
-
-if ($getResults == FALSE)
-    echo (sqlsrv_errors());
-sqlsrv_free_stmt($getResults);
-      sqlsrv_close( $conn);
-header('Location: index_keijiban.php');
-exit();
-
-}
-?>
-
-<section class="toukou">
-    <h2 >投稿一覧</h2>
-
 </section>
 </body>
 </html>
