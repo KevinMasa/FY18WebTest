@@ -81,6 +81,9 @@ exit();
           	  <input type="submit" value="更新">
  		   </form>
 <?php
+
+$nowdate = "'".date("Y-m-d G:i:s")."'";
+echo $nowdate;
     $serverName1 = "fy18test.database.windows.net";
 $connectionOptions1 = array(
     "Database" => "fy18test",
