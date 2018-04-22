@@ -66,7 +66,7 @@ $connectionOptions = array(
     "PWD" => "Fy18_test"
 );
 $conn = sqlsrv_connect($serverName, $connectionOptions);
-$tsql= "INSERT INTO keijiban(name,contents,time) VALUES($personal_name,$personal_comment,$nowdate)";
+$tsql= "INSERT INTO keijiban(name,contents) VALUES($personal_name,$personal_comment)";
 
 $getResults= sqlsrv_query($conn, $tsql);
 
@@ -101,7 +101,6 @@ while (sqlsrv_fetch($getResults1) === true) {
 echo "<p>投稿者:".sqlsrv_get_field($getResults1, 0)."</p>";
 echo "<p>内容:</p>";
 echo "<p>".sqlsrv_get_field($getResults1, 1)."</p>";
-echo "<p>".sqlsrv_get_field($getResults1, 2)."</p>";
 echo "<hr>";
 }
 sqlsrv_free_stmt($getResults1); 
