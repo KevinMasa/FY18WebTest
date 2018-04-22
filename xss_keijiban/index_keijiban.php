@@ -46,8 +46,8 @@ body{
 </section>
 <section class="toukou">
     <h2 >投稿一覧</h2>
-           <form action="index_keijiban.php" method="get">
-          	  <input type="submit" name="reload" value="更新">
+           <form action="index_keijiban.php" method="">
+          	  <input type="submit" value="更新">
  		   </form>
 <?php
     $serverName = "fy18test.database.windows.net";
@@ -61,6 +61,7 @@ $conn = sqlsrv_connect($serverName, $connectionOptions);
 $tsql= "SELECT * FROM keijiban";
 
 $getResults= sqlsrv_query($conn, $tsql);
+echo $getResults; 
 if ($getResults == FALSE)
     echo (sqlsrv_errors());
 while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
