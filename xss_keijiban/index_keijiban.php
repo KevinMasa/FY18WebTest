@@ -53,7 +53,7 @@ body{
      
 $personal_name = "'"."test"."'";
 $personal_comment = "'"."uawwwwwwww"."'";
-
+}
 ?>
 </section>
 </body>
