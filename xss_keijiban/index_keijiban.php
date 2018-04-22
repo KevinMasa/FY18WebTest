@@ -53,6 +53,10 @@ body{
      
 $personal_name = "'"."test"."'";
 $personal_comment = "'"."uawwwwwwww"."'";
+$nowdate = date("Y-m-d");
+$nowtime = date("H:i:s");
+$now = "'".$nowdate." ".$nowtime."'";
+echo $now;
 }
 ?>
 </section>
