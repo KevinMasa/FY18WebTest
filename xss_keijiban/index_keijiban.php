@@ -26,7 +26,7 @@ body{
 </head>
 
 <body>
-<a href="../index.html"></a>
+<a href="../index.html">topへ</a>
 <h3>クロスサイトスクリプティングのサンプルページです。</h3>
 
 <h1>掲示板</h1>
