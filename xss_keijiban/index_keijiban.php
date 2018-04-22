@@ -93,10 +93,11 @@ $connectionOptions1 = array(
 $conn1 = sqlsrv_connect($serverName1, $connectionOptions1);
 $tsql1 = "select * from keijiban";
 
-echo "<hr>";
 $getResults1= sqlsrv_query($conn1, $tsql1);
 if ($getResults1 == FALSE)
     echo (sqlsrv_errors());
+
+echo "<hr>";
 while ($row1 = sqlsrv_fetch_array($getResults1, SQLSRV_FETCH_ASSOC)) {
 echo "<p>".$row1['time']."</p>";
 echo "<p>投稿者:".$row1['name']."</p>";
