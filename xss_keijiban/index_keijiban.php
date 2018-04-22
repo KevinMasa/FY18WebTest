@@ -96,6 +96,11 @@ $tsql1 = "select * from keijiban";
 $getResults1= sqlsrv_query($conn1, $tsql1);
 if ($getResults1 == FALSE)
     echo (sqlsrv_errors());
+$row1 = sqlsrv_fetch_array($getResults1, SQLSRV_FETCH_ASSOC)
+if($row1 == NULL){
+echo "<hr>";
+}
+
 
 while ($row1 = sqlsrv_fetch_array($getResults1, SQLSRV_FETCH_ASSOC)) {
 echo "<p>".$row1['time']."</p>";
