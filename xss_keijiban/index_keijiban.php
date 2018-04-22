@@ -49,7 +49,9 @@ body{
 <?php
      if(isset($_POST['comment'])){
          echo "<p>投稿はまだありません</p>";
-     }else{}
+     }else{
+     echo "<p>投稿はありmaaaaasy</p>";
+     }
 ?>
 </section>
 </body>
