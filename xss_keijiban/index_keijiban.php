@@ -97,7 +97,9 @@ $getResults1= sqlsrv_query($conn1, $tsql1);
 echo $getResults1;
 if ($getResults1 == FALSE)
     echo (sqlsrv_errors());
-while ($row1 = sqlsrv_fetch_array($getResults1, SQLSRV_FETCH_ASSOC)) {
+    $row1 = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC);
+echo $row1;    
+while ($row1 = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
 echo "<p>".$row1['time']."</p>";
 echo "<p>投稿者:".$row1['name']."</p>";
 echo "<p>内容:</p>";
