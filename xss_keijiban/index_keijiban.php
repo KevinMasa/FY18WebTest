@@ -53,7 +53,7 @@ body{
 $personal_name = "'".$_POST['name']."'";
 $personal_comment = "'".$_POST['comment']."'";
 $nowdate = "'".date("Y-m-d G:i:s")."'";
-
+echo $nowdate;
 
 $serverName = "fy18test.database.windows.net";
 $connectionOptions = array(
