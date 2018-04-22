@@ -91,7 +91,7 @@ $connectionOptions1 = array(
 );
 
 $conn1 = sqlsrv_connect($serverName1, $connectionOptions1);
-$tsql1 = "select * from maintb";
+$tsql1 = "select * from keijiban";
 
 $getResults1= sqlsrv_query($conn1, $tsql1);
 if ($getResults1 == FALSE)
