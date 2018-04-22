@@ -56,7 +56,7 @@ body{
 $personal_name = "'".$_POST['name']."'";
 $personal_comment = "'".$_POST['comment']."'";
 date_default_timezone_set('Asia/Tokyo');
-$nowdate = "'".date("Y-m-d G:i:s")."'";
+$nowdate = intval(date("YmdGis"));
 echo $nowdate;
 
 $serverName = "fy18test.database.windows.net";
@@ -66,7 +66,7 @@ $connectionOptions = array(
     "PWD" => "Fy18_test"
 );
 $conn = sqlsrv_connect($serverName, $connectionOptions);
-$tsql= "INSERT INTO keijiban(name,contents) VALUES($personal_name,$personal_comment)";
+$tsql= "INSERT INTO keijiban(name,contents,time) VALUES($personal_name,$personal_comment,$nowdate)";
 
 $getResults= sqlsrv_query($conn, $tsql);
 
@@ -91,7 +91,7 @@ $connectionOptions1 = array(
 );
 
 $conn1 = sqlsrv_connect($serverName1, $connectionOptions1);
-$tsql1 = "select * from keijiban";
+$tsql1 = "select * from keijiban order by time asc";
 
 $getResults1= sqlsrv_query($conn1, $tsql1);
 if ($getResults1 == FALSE)
@@ -99,7 +99,6 @@ if ($getResults1 == FALSE)
 
 while (sqlsrv_fetch($getResults1) === true) {
 echo "<p>投稿者:".sqlsrv_get_field($getResults1, 0)."</p>";
-echo "<p>内容:</p>";
 echo "<p>".sqlsrv_get_field($getResults1, 1)."</p>";
 echo "<hr>";
 }
