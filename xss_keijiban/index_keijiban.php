@@ -26,6 +26,7 @@ body{
 </head>
 
 <body>
+<p>
 <?php
 
     $serverName1 = "fy18test.database.windows.net";
@@ -53,6 +54,7 @@ sqlsrv_free_stmt($getResults1);
 sqlsrv_close( $conn1);
 echo "<hr>";
 ?>
+</p>
 <h3>クロスサイトスクリプティングのサンプルページです。</h3>
 
 <h1>掲示板</h1>
