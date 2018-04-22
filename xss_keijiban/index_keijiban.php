@@ -30,6 +30,9 @@ body{
 <h3>クロスサイトスクリプティングのサンプルページです。</h3>
 
 <h1>掲示板</h1>
+       <form action="index_keijiban.php" method="">
+      	  <input type="submit" value="更新">
+      </form>
 <section>
     <h2>新規投稿</h2>
         <form action="" method="post">
@@ -52,6 +55,7 @@ body{
      
 $personal_name = "'".$_POST['name']."'";
 $personal_comment = "'".$_POST['comment']."'";
+date_default_timezone_set('Asia/Tokyo');
 $nowdate = "'".date("Y-m-d G:i:s")."'";
 echo $nowdate;
 
@@ -92,7 +96,6 @@ $conn1 = sqlsrv_connect($serverName1, $connectionOptions1);
 $tsql1 = "select * from keijiban";
 
 $getResults1= sqlsrv_query($conn1, $tsql1);
-echo $getResults1;
 if ($getResults1 == FALSE)
     echo (sqlsrv_errors());
 while ($row1 = sqlsrv_fetch_array($getResults1, SQLSRV_FETCH_ASSOC)) {
@@ -104,6 +107,7 @@ echo "<hr>";
 }
 sqlsrv_free_stmt($getResults1);
 
+echo "<hr>";
 ?>
 </section>
 </body>
