@@ -1,5 +1,5 @@
 <?php
-header("Content-Type: text/html; charset=Shift_JIS");
+header("Content-Type: text/html; charset=UTF-8");
 ?>
 
 <!DOCTYPE html>
