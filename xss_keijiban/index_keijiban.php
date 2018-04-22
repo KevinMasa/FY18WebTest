@@ -71,9 +71,9 @@ $getResults= sqlsrv_query($conn, $tsql);
 if ($getResults == FALSE)
     echo (sqlsrv_errors());
 
-print('<p>投稿者:'.$personal_name.'</p>');
-print('<p>内容:</p>');
-print('<p>'.$personal_comment.'</p>');
+echo "<p>投稿者:".$personal_name."</p>";
+echo "<p>内容:</p>";
+echo "<p>".$personal_comment."</p>";
 
      }
 ?>
