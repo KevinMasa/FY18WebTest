@@ -16,10 +16,18 @@ header("Content-Type: text/html; charset=UTF-8");
 下に入力した文字が表示されます。<br>
 <?php 
  print $_POST["value"];
-
 ?>
 
+<!--
+<?php 
+ print $_POST["value"];
+?>
+
+-->
+
 </p>
+
+<button type="button" onclick="history.back()">戻る</button>
 
 </body>
 </html>

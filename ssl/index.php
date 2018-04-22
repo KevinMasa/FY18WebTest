@@ -63,6 +63,6 @@ function checkPassword(e) {
 </dl>
 <button type="submit" name="action" value="send">ログイン</button>
 </form>
-
+<button type="button" onclick="history.back()">戻る</button>
 </body>
 </html>

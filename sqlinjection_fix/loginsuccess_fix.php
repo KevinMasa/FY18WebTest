@@ -99,5 +99,7 @@ sqlsrv_free_stmt($getResults);
 
 -->
 
+<button type="button" onclick="history.back()">戻る</button>
+
 </body>
 </html>
