@@ -76,7 +76,11 @@ $getResults= sqlsrv_query($conn, $tsql);
 if ($getResults == FALSE)
     echo (sqlsrv_errors());
 while ($getResults = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
-
+echo "<p>".$getResults['time']."</p>";
+echo "<p>投稿者:".$getResults['name']."</p>";
+echo "<p>内容:</p>";
+echo "<p>".$getResults['contents']."</p>";
+echo "<hr>";
 }
 sqlsrv_free_stmt($getResults);
      }else{
