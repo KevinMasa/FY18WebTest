@@ -55,26 +55,6 @@ $personal_name = "'"."test"."'";
 $personal_comment = "'"."uawwwwwwww"."'";
 $nowdate = date(Y-m-d);
 $nowtime = date(H:i:s);
-$now = "'".$nowdate." ".$nowtime."'";
-
-$serverName = "fy18test.database.windows.net";
-$connectionOptions = array(
-    "Database" => "fy18test",
-    "Uid" => "fy18test",
-    "PWD" => "Fy18_test"
-);
-$conn = sqlsrv_connect($serverName, $connectionOptions);
-$tsql= "INSERT INTO keijiban(name,contents,time) VALUES($personal_name,$personal_comment,$now)";
-
-$getResults= sqlsrv_query($conn, $tsql);
-
-if ($getResults == FALSE)
-    echo (sqlsrv_errors());
-
-echo "<p>投稿者:".$personal_name."</p>";
-echo "<p>内容:</p>";
-echo "<p>".$personal_comment."</p>";
-
      }
 ?>
 </section>
