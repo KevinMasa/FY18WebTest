@@ -50,16 +50,16 @@ body{
           	  <input type="submit" name="reload" value="更新">
  		   </form>
 <?php
-
     $serverName = "fy18test.database.windows.net";
 $connectionOptions = array(
     "Database" => "fy18test",
     "Uid" => "fy18test",
     "PWD" => "Fy18_test"
 );
+
 $conn = sqlsrv_connect($serverName, $connectionOptions);
 $tsql= "SELECT * FROM keijiban";
-
+echo $tsql;
 $getResults= sqlsrv_query($conn, $tsql);
 
 if ($getResults == FALSE)
