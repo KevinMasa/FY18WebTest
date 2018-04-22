@@ -73,6 +73,7 @@ $getResults= sqlsrv_query($conn, $tsql);
 if ($getResults == FALSE)
     echo (sqlsrv_errors());
 sqlsrv_free_stmt($getResults);
+      sqlsrv_close( $conn);
 header('Location: index_keijiban.php');
 exit();
 
@@ -96,20 +97,16 @@ $tsql1 = "select * from keijiban";
 $getResults1= sqlsrv_query($conn1, $tsql1);
 if ($getResults1 == FALSE)
     echo (sqlsrv_errors());
-$row1 = sqlsrv_fetch_array($getResults1, SQLSRV_FETCH_ASSOC);
 
-echo $row1;
-
-
-while ($row1 = sqlsrv_fetch_array($getResults1, SQLSRV_FETCH_ASSOC)) {
-echo "<p>".$row1['TIME']."</p>";
-echo "<p>投稿者:".$row1['NAME']."</p>";
+while (sqlsrv_fetch($getResults1) === true) {
+echo "<p>".sqlsrv_get_field($getResults1, 2)."</p>";
+echo "<p>投稿者:".sqlsrv_get_field($getResults1, 0)."</p>";
 echo "<p>内容:</p>";
-echo "<p>".$row1['CONTENTS']."</p>";
+echo "<p>".sqlsrv_get_field($getResults1, 1)."</p>";
 echo "<hr>";
 }
-sqlsrv_free_stmt($getResults1);
-
+sqlsrv_free_stmt($getResults1); 
+sqlsrv_close( $conn1);
 echo "<hr>";
 ?>
 </section>
