@@ -51,10 +51,10 @@ body{
          echo "<p>投稿はまだありません</p>";
      }else{
      
-$personal_name = "'"."test"."'";
-$personal_comment = "'"."uawwwwwwww"."'";
+$personal_name = "'".$_POST['name']."'";
+$personal_comment = "'".$_POST['comment']."'";
 $nowdate = date("Y-m-d");
-$nowtime = date("H:i:s");
+$nowtime = date("G:i:s");
 $now = "'".$nowdate." ".$nowtime."'";
 echo $now;
 
