@@ -46,11 +46,11 @@ body{
 </section>
 <section class="toukou">
     <h2 >投稿一覧</h2>
-           <form action="index_keijiban.php" method="post">
+           <form action="index_keijiban.php" method="get">
           	  <input type="submit" name="reload" value="更新">
  		   </form>
 <?php
-	if(!isset($_POST['write'])){
+	if(!isset($_GET['reload'])){
 		
 	}else{
 	   
