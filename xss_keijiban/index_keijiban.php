@@ -50,7 +50,31 @@ body{
      if(!isset($_POST['comment'])){
          echo "<p>投稿はまだありません</p>";
      }else{
-     echo "<p>投稿はありmaaaaasy</p>";
+     
+$personal_name = "'".$_POST['name']."'";
+$personal_comment = "'".$_POST['comment']."'";
+$nowdate = date(Y-m-d);
+$nowtime = date(H:i:s);
+$now = "'".$nowdate." ".$nowtime."'";
+
+$serverName = "fy18test.database.windows.net";
+$connectionOptions = array(
+    "Database" => "fy18test",
+    "Uid" => "fy18test",
+    "PWD" => "Fy18_test"
+);
+$conn = sqlsrv_connect($serverName, $connectionOptions);
+$tsql= "INSERT INTO keijiban(name,contents,time) VALUES($personal_name,$personal_comment,$now)";
+
+$getResults= sqlsrv_query($conn, $tsql);
+
+if ($getResults == FALSE)
+    echo (sqlsrv_errors());
+
+print('<p>投稿者:'.$personal_name.'</p>');
+print('<p>内容:</p>');
+print('<p>'.$personal_comment.'</p>');
+
      }
 ?>
 </section>
