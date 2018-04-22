@@ -98,7 +98,7 @@ sqlsrv_free_stmt($getResults);
 //%' OR 1 = 1; -- %
 
 -->
-
+<br>
 <button type="button" onclick="history.back()">戻る</button>
 
 </body>

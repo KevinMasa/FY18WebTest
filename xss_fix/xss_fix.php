@@ -25,6 +25,8 @@ HTMLにおいて特別な意味をもつ&lt; &gt;などをエスケープする�
 -->
 
 </p>
+
+<br>
 <button type="button" onclick="history.back()">戻る</button>
 
 </body>
