@@ -51,8 +51,8 @@ body{
          echo "<p>投稿はまだありません</p>";
      }else{
      
-$personal_name = "'".$_POST['name']."'";
-$personal_comment = "'".$_POST['comment']."'";
+$personal_name = "'"."test"."'";
+$personal_comment = "'"."uawwwwwwww"."'";
 $nowdate = date(Y-m-d);
 $nowtime = date(H:i:s);
 $now = "'".$nowdate." ".$nowtime."'";
