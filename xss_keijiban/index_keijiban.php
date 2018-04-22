@@ -46,9 +46,44 @@ body{
 </section>
 <section class="toukou">
     <h2 >投稿一覧</h2>
+           <form action="index_keijiban.php" method="post">
+          	  <input type="submit" name="reload" value="更新">
+ 		   </form>
+<?php
+	if(!isset($_POST['write'])){
+		
+	}else{
+	   
+header('Location: index_keijiban.php');
+exit();
+	}
+?>
+ 		   
+ 		   
 <?php
      if(!isset($_POST['comment'])){
-         echo "<p>投稿はまだありません</p>";
+$serverName = "fy18test.database.windows.net";
+$connectionOptions = array(
+    "Database" => "fy18test",
+    "Uid" => "fy18test",
+    "PWD" => "Fy18_test"
+);
+$conn = sqlsrv_connect($serverName, $connectionOptions);
+$tsql= "SELECT * FROM keijiban";
+
+$getResults= sqlsrv_query($conn, $tsql);
+
+if ($getResults == FALSE)
+    echo (sqlsrv_errors());
+while ($getResults = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
+echo "<p>.$getResults['time'].</p>"
+echo "<p>投稿者:".$getResults['name']."</p>";
+echo "<p>内容:</p>";
+echo "<p>".$getResults['contents']."</p>";
+ echo "<hr>";
+}
+
+    
      }else{
      
 $personal_name = "'".$_POST['name']."'";
@@ -72,10 +107,9 @@ $getResults= sqlsrv_query($conn, $tsql);
 
 if ($getResults == FALSE)
     echo (sqlsrv_errors());
-
-echo "<p>投稿者:".$personal_name."</p>";
-echo "<p>内容:</p>";
-echo "<p>".$personal_comment."</p>";
+    
+header('Location: index_keijiban.php');
+exit();
 
 }
 ?>
