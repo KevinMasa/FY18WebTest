@@ -16,6 +16,7 @@
 <p>ボタンを押すと、入力した文字を表示させます。</p>
 <p>そのまま表示されるので、スクリプトなどHTMLタグが入力されるとブラウザがタグだと判断し実行されてしまいます</p>
 <p>例として警告やメッセージをポップアップで表示するスクリプト　&lt;script&gt;alert("表示する内容")&lt;/script&gt　を入力してみましょう。</p>
+
 <form action = "xss.php" method = "post">
 入力：<input type = "text" name ="value" />
 <button type="submit" name="action" value="send">表示</button>

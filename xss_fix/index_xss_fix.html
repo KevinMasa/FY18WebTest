@@ -15,6 +15,7 @@
 <h3>XSS対策後ページ</h3>
 <p>ボタンを押すと、入力した文字を表示させます。</p>
 <p>対策として、「&lt;」や「&gt;」、「&amp;」、「&quot;」、「&#39;」などを文字列として認識するように変換するようにしています。</p>
+
 <form action = "xss_fix.php" method = "post">
 入力：<input type = "text" name ="value" />
 <button type="submit" name="action" value="send">表示</button>
