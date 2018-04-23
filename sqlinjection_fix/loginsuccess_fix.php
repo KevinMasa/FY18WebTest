@@ -7,11 +7,11 @@ header("Content-Type: text/html; charset=UTF-8");
 
 <head>
 <meta charset = "UTF-8">
-<title>SQL Injection</title>
+<title>SQLインジェクション(対策)</title>
 </head>
 
 <body>
-<h2>アカウント情報の取得</h2>
+<h2>SQLインジェクション(対策)</h2>
 
 <?php 
 $inputid = $_POST["id"];

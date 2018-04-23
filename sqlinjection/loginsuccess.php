@@ -11,7 +11,7 @@ header("Content-Type: text/html; charset=UTF-8");
 </head>
 
 <body>
-<h2>アカウント情報の取得</h2>
+<h2>SQLインジェクション(脆弱)</h2>
 
 <?php 
 $inputid = $_POST["id"];
@@ -20,12 +20,7 @@ echo "渡されたSQL文　「".htmlspecialchars($tsql,ENT_QUOTES)."」";
 
 ?>
 <br>
-↑ nameの後は「'」シングルクォートです。
-<br>
 SELECT * FROM maintb WHERE name ='○○' (maintbというテーブルからnameが○○の情報を抽出します。)
-<br>
-WHERE句が全てを意味するように○○に入力する。
-<br>
 <br>
 
 
