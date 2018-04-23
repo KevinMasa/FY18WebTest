@@ -38,6 +38,7 @@ dl.profile dd{
 ④ http://fy18test.azurewebsites.net/ssl/index.php 　へアクセス</br>
 ⑤ 「ユーザー名」と「パスワード」を入力してログイン（テキトウでok）</br>
 ⑥ WiresharkでPOSTしている通信を確認</br></br>
+⑦ 上部の表示フィルタを「tcp」に変更</br>
 ⑦ https://fy18test.azurewebsites.net/ssl/index.php 　へアクセス</br>
 ⑧ 「ユーザー名」と「パスワード」を入力してログイン（テキトウでok）</br>
 ⑨ WiresharkでInfoの部分にApplication Dataと書かれた通信を確認</br>
