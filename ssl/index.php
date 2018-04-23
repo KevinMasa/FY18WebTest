@@ -29,16 +29,20 @@ dl.profile dd{
 <body>
 <h3>HTTPとHTTPS通信内容の違い</h3>
 <h3>このページにhttp://とhttps://のそれぞれでアクセスし</h3></br>
-<h3>ログインをして、WireSharkで通信内容を確認してみましょう。</h3></br>
+<h3>ログインをボタンを押して、WireSharkで通信内容を確認してみましょう。</h3></br>
 
-<h3>
+<h4>
 ①Wiresharkを起動</br>
 ② キャプチャ->WiFiをダブルクリック</br>
 ③ 上部の表示フィルタに「http」を設定</br>
 ④ http://fy18test.azurewebsites.net/ssl/index.php 　へアクセス</br>
 ⑤ 「ユーザー名」と「パスワード」を入力してログイン（テキトウでok）</br>
-⑥ WiresharkでPOSTしている通信を確認</br>
-</h3></br>
+⑥ WiresharkでPOSTしている通信を確認</br></br>
+⑦ https://fy18test.azurewebsites.net/ssl/index.php 　へアクセス</br>
+⑧ 「ユーザー名」と「パスワード」を入力してログイン（テキトウでok）</br>
+⑨ WiresharkでInfoの部分にApplication Dataと書かれた通信を確認</br>
+
+</h4></br>
 
 </hr></br>
 <h4>ユーザ名とパスワードを入力してください</h4>

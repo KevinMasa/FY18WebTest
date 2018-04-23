@@ -27,6 +27,7 @@ header("Content-Type: text/html; charset=UTF-8");
 
 </p>
 <br>
+<p>スクリプトだけを入力した場合、実行されてしまうので何も表示されません</p>
 <button type="button" onclick="history.back()">戻る</button>
 
 </body>
